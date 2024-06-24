@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+.navbar-brand {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: xx-large;
+}
+
+.principal {
+    background-color: rgb(244,194,194, 30%);
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;}
+
+.principal h2 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 40px;
+
+}
+
+.allCards {
+    display: inline-grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+
+
+div h2 {
+    padding-top: 15px;
+    text-align: center;
+}
+.card {
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+}
+.btn {
+    transition: background-color 0.5s ease;
+    text-align: center;
+    border-color: black;
+    color: black;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicat</title>
+    <link rel="icon" href="roupas/icon.png">
+    <script lang="javascript" src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Delicat</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" onclick="filterProducts('all')">Todos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterProducts('Corsets')">Corsets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterProducts('Saias')">Saias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterProducts('Blusas')">Blusas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterProducts('Vestidos')">Vestidos</a>
+              </li>
+            </ul>
+          </div>
+       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"  onmouseover="carrinho_branco()" onmouseleave="carrinho_preto()" >
+         <img src="roupas/126510.png" style="width: 20px; height:auto"id="carrinho">
+        </button>   
+        </div>
+        
+      </nav>
+      
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="staticBackdropLabel">Carrinho de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div id="cart">
+            <ul id="cart-list"></ul>
+            <div id="total">
+              <strong>Total: R$ <span id="total-value">0.00</span></strong>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="principal">
+            <h2 id="categoria">Todos</h2>
+            <br>
+            <div class="allCards">           
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido.png" class="card-img-top" alt="vestido corset rosa">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO BUSTIER MAEVE</h5>
+                    <p>R$179,90</p>
+                    <a onclick="addToCart(1)" class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido2.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO BUSTIER RENDA</h5>
+                    <p>R$159,90</p>
+                    <a onclick="addToCart(2)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido3.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO MODELADOR</h5>
+                    <p>R$269,90</p>
+                    <a onclick="addToCart(3)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido4.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO SELENA</h5>
+                    <p>R$239,90</p>
+                    <a onclick="addToCart(4)" class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Corsets" style="width: 18rem;">
+                    <img src="roupas/corset.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">CORSET SAMANTHA</h5>
+                    <P>R$169,90</P>
+                    <a onclick="addToCart(5)" class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido5.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO CLOE</h5>
+                    <p>R$259,90</p>
+                    <a onclick="addToCart(6)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido6.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO SOPHIE </h5>
+                    <p>R$169,90</p>
+                    <a onclick="addToCart(7)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido7.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO ANNE </h5>
+                    <p>R$199,90</p>
+                    <a onclick="addToCart(8)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+                <div class="card produto Vestidos" style="width: 18rem;">
+                    <img src="roupas/vestido8.png" class="card-img-top" alt="vestido corset preto">
+                    <div class="card-body">
+                    <h5 class="card-title">VESTIDO SAMIRA</h5>
+                    <p>R$189,90</p>
+                    <a onclick="addToCart(9)"  class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+      </main>
+<footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+          <p>&copy; 2024 Delicat. All rights reserved.
+          </p>
+        </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
